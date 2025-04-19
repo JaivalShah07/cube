@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantumCube | Company Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar {
+  background: #111;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0ef;
+}
+
+.hero {
+  background: linear-gradient(to right, #0ef, #00c6ff);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.about, .services, .projects, .team, .contact {
+  padding: 3rem 0;
+  background: #fff;
+  margin-bottom: 1rem;
+}
+
+.services .service-grid, .team .team-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service, .team-member, .project {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+h3 {
+  color: #007BFF;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">QuantumCube</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Innovating the Future, One Cube at a Time</h2>
+      <p>QuantumCube is a tech-driven company transforming ideas into solutions.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>QuantumCube is a forward-thinking company specializing in software development, AI solutions, and cloud-based systems. With a passion for innovation, we help businesses thrive in the digital world.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service">
+          <h3>Web Development</h3>
+          <p>Modern, responsive websites tailored to your brand and needs.</p>
+        </div>
+        <div class="service">
+          <h3>AI & Machine Learning</h3>
+          <p>Data-driven AI solutions to enhance efficiency and insight.</p>
+        </div>
+        <div class="service">
+          <h3>Cloud Computing</h3>
+          <p>Secure, scalable cloud infrastructure for your growing business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Smart Analytics Platform</h3>
+          <p>An AI-powered dashboard to visualize business KPIs in real-time.</p>
+        </div>
+        <div class="project">
+          <h3>CubeCommerce</h3>
+          <p>An eCommerce solution integrated with cloud and AI recommendation engines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="team">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <h3>Aarav Mehta</h3>
+          <p>CEO & Co-Founder</p>
+        </div>
+        <div class="team-member">
+          <h3>Neha Patel</h3>
+          <p>CTO</p>
+        </div>
+        <div class="team-member">
+          <h3>Rohan Desai</h3>
+          <p>Lead Developer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: contact@quantumcube.tech</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 QuantumCube. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
