@@ -2,207 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QuantumCube | Company Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f9fb;
+    }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
-}
+    .team-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+    .team-section h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #333;
+    }
 
-.navbar {
-  background: #111;
-  color: #fff;
-  padding: 1rem 0;
-}
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      justify-items: center;
+    }
 
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .team-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+    }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+    .card-image {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+    }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.nav-links a:hover {
-  color: #0ef;
-}
+    .team-card h3 {
+      margin: 15px 0 5px;
+      font-size: 20px;
+      color: #222;
+    }
 
-.hero {
-  background: linear-gradient(to right, #0ef, #00c6ff);
-  color: white;
-  padding: 4rem 0;
-  text-align: center;
-}
+    .team-card p {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 15px;
+    }
 
-.about, .services, .projects, .team, .contact {
-  padding: 3rem 0;
-  background: #fff;
-  margin-bottom: 1rem;
-}
+    /* Responsive layout */
+    @media (max-width: 992px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-.services .service-grid, .team .team-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.service, .team-member, .project {
-  background: #fafafa;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #111;
-}
-
-h3 {
-  color: #007BFF;
-  margin-bottom: 0.5rem;
-}
-
-.footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-}
-
+    @media (max-width: 600px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">QuantumCube</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h2>Innovating the Future, One Cube at a Time</h2>
-      <p>QuantumCube is a tech-driven company transforming ideas into solutions.</p>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>QuantumCube is a forward-thinking company specializing in software development, AI solutions, and cloud-based systems. With a passion for innovation, we help businesses thrive in the digital world.</p>
-    </div>
-  </section>
-
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-grid">
-        <div class="service">
-          <h3>Web Development</h3>
-          <p>Modern, responsive websites tailored to your brand and needs.</p>
+  <div class="team-section">
+    <h1>Our Team</h1>
+    <div class="team-grid">
+      <!-- Team Member 1 -->
+      <div class="team-card">
+        <div class="card-image">
+          <img src="https://via.placeholder.com/300x200" alt="Team Member">
         </div>
-        <div class="service">
-          <h3>AI & Machine Learning</h3>
-          <p>Data-driven AI solutions to enhance efficiency and insight.</p>
+        <h3>Jane Doe</h3>
+        <p>Lead Designer</p>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-card">
+        <div class="card-image">
+          <img src="https://via.placeholder.com/300x200" alt="Team Member">
         </div>
-        <div class="service">
-          <h3>Cloud Computing</h3>
-          <p>Secure, scalable cloud infrastructure for your growing business.</p>
+        <h3>Michael Smith</h3>
+        <p>Project Manager</p>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-card">
+        <div class="card-image">
+          <img src="https://via.placeholder.com/300x200" alt="Team Member">
         </div>
+        <h3>Lisa Wong</h3>
+        <p>UI/UX Developer</p>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="team-card">
+        <div class="card-image">
+          <img src="https://via.placeholder.com/300x200" alt="Team Member">
+        </div>
+        <h3>Raj Patel</h3>
+        <p>SEO Expert</p>
+      </div>
+
+      <!-- Team Member 5 -->
+      <div class="team-card">
+        <div class="card-image">
+          <img src="https://via.placeholder.com/300x200" alt="Team Member">
+        </div>
+        <h3>Emily Davis</h3>
+        <p>Marketing Lead</p>
+      </div>
+
+      <!-- Team Member 6 -->
+      <div class="team-card">
+        <div class="card-image">
+          <img src="https://via.placeholder.com/300x200" alt="Team Member">
+        </div>
+        <h3>Chris Taylor</h3>
+        <p>Backend Engineer</p>
       </div>
     </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Our Projects</h2>
-      <div class="project-list">
-        <div class="project">
-          <h3>Smart Analytics Platform</h3>
-          <p>An AI-powered dashboard to visualize business KPIs in real-time.</p>
-        </div>
-        <div class="project">
-          <h3>CubeCommerce</h3>
-          <p>An eCommerce solution integrated with cloud and AI recommendation engines.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="team" class="team">
-    <div class="container">
-      <h2>Meet Our Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <h3>Aarav Mehta</h3>
-          <p>CEO & Co-Founder</p>
-        </div>
-        <div class="team-member">
-          <h3>Neha Patel</h3>
-          <p>CTO</p>
-        </div>
-        <div class="team-member">
-          <h3>Rohan Desai</h3>
-          <p>Lead Developer</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Email: contact@quantumcube.tech</p>
-      <p>Phone: +91 98765 43210</p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 QuantumCube. All rights reserved.</p>
-    </div>
-  </footer>
+  </div>
 </body>
 </html>
