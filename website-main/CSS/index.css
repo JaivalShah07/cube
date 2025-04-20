@@ -1,0 +1,132 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.headerbox
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    height: 140px;
+    width: 100%;
+}
+
+.headerbox .name
+{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.headerbox .name img
+{
+    height: 100px;
+    width: 100px;
+}
+
+.headerbox .name a h1
+{
+    font-size: 2.5rem;
+}
+
+.headerbox .name p
+{
+    padding: 2px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.headerbox a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav
+{
+    display: flex;
+    margin-right: 5rem;
+    font-size: 20px;
+    gap: 50px;
+}
+
+.nav a
+{
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav a:hover
+{
+    transform: scale(1.1);
+}
+
+
+            /* MAIN BODY */
+
+
+.main
+{
+    background-color: #fff;
+    color: #1b262c;
+    height:100%;
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: 17px 17px 10px grey;
+    padding: 150px;
+}
+
+.main h3
+{
+    margin-top: 1rem;
+}
+
+.btn button
+{
+    margin-top: 90px;
+    background-color: #333;
+    border: 0px;
+    border-radius: 25px;
+    font-size: large;
+    height: 3.5rem;
+    width: 6.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn button a
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn button:hover
+{
+    text-decoration: none;
+    transform: scale(1.04);
+}
+
+.footer
+{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    margin-top: auto;
+    font-size: 18px;
+}
