@@ -73,11 +73,13 @@ body
 .nav a:hover
 {
     transform: scale(1.1);
+    text-shadow: 1px 1px 10px whitesmoke;
 }
 
 .nav a.active
 {
     border-bottom: 3px solid cyan;
+    text-shadow: 1px 1px 10px whitesmoke;
 }
 
 .main
