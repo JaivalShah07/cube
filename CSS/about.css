@@ -43,7 +43,7 @@ body
 .header .name p
 {
     padding: 2px;
-    font-weight: bold;
+    font-weight: 200;
     font-size: 15px;
 }
 
@@ -141,4 +141,5 @@ footer
     text-align: center;
     padding: 16px;
     font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

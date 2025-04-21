@@ -19,7 +19,7 @@ body
 .main-container1
 {
     background-color: #222;
-    height: 600px;
+    height: 100%;
     width: 20%;
 }
 
@@ -90,14 +90,4 @@ body
     font-size: 20px;
     letter-spacing: 10px;
     margin-left: 45px;
-}
-
-.footer
-{
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    margin-top: auto;
-    font-size: 18px;
 }
