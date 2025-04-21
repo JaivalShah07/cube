@@ -5,7 +5,7 @@
 }
 body
 {
-    font-family: 'Tinos', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header
@@ -80,7 +80,7 @@ body
 }
 .about-section
 {
-    font-family: 'Tinos', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
     padding: 100px 50px;
     text-align: center;

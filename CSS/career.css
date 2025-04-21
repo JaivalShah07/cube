@@ -93,7 +93,7 @@ body
 
 .main .main-container h2
 {
-    font-size: 36px;
+    font-size: 49px;
     margin-bottom: 30px;
 }
 
@@ -112,13 +112,12 @@ body
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 .main .main-container .btn:hover
 {
     background-color: #222;
-    transform: scale(1.2);
-    transition: all 0.3s ease-in-out;
 }
 
 .job
