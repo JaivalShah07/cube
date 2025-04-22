@@ -165,6 +165,7 @@ body
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 4px;
+    transition: all 0.3s ease-in-out;
 }
 
 .apply-btn:hover
