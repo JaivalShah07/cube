@@ -118,13 +118,27 @@ body
     margin-bottom: 1.5rem;
 }
 
-input, textarea
+#message
 {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
+}
+
+.form-field input
+{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.checkbox label
+{
+    font-size: x-large;
 }
 
 .form-section button

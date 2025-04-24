@@ -20,7 +20,7 @@ body
 {
     background-color: #222;
     max-height: 1253px;
-    width: 25%;
+    width: 350px;
 }
 
 .main-container1 img
@@ -28,7 +28,7 @@ body
     border-radius: 50%;
     height: 250px;
     width: 250px;
-    margin: 50px 0px 0px 22px;
+    margin: 50px 0px 0px 50px;
 }
 
 .main-container1 h2
