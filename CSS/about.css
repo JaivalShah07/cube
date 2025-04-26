@@ -101,3 +101,16 @@ body
 {
     margin: 50px 30px 0px 30px;
 }
+
+.main-container h2, 
+.main-container h4, 
+.main-container p {
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
