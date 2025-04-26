@@ -1,285 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services | Web Design Co.</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-  <style>
-
-    /* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | QuantumCube</title>
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="icon" href="./images/title-logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos" rel="stylesheet">
+    <style>
+      *
+{
+    margin: 0;
+    padding: 0;
 }
-body {
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background-color: #f9f9f9;
+body
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Utility */
-h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background: #0056b3;
+.header
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    height: 140px;
+    width: 100%;
 }
 
-/* Hero Section */
-.hero {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+.header .name
+{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
 }
 
-/* Services */
-.services {
-  padding: 60px 20px;
-  background: #fff;
-}
-.service-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.service-card {
-  background: #f0f0f0;
-  padding: 30px;
-  border-radius: 8px;
-  flex: 1 1 280px;
-  text-align: center;
+.header .name img
+{
+    height: 100px;
+    width: 100px;
 }
 
-/* Process Section */
-.process {
-  padding: 60px 20px;
-  background: #eef2f5;
-}
-.steps {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.step {
-  background: #fff;
-  padding: 20px;
-  border-radius: 6px;
-  flex: 1 1 120px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.header .name h1
+{
+    font-size: 2.5rem;
 }
 
-/* Why Choose Us */
-.why-us {
-  padding: 60px 20px;
-}
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.feature {
-  background: #fff;
-  padding: 20px;
-  text-align: center;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+.header .name p
+{
+    padding: 2px;
+    font-weight: 200;
+    font-size: 15px;
 }
 
-/* Testimonials */
-.testimonials {
-  padding: 60px 20px;
-  background: #fff;
-  text-align: center;
-}
-.testimonial {
-  max-width: 700px;
-  margin: 0 auto;
-}
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-.testimonial h4 {
-  font-weight: normal;
+.header a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Footer CTA */
-.footer-cta {
-  background: #007bff;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-.footer-cta .btn {
-  background: white;
-  color: #007bff;
-  margin-top: 1rem;
-}
-.footer-cta .btn:hover {
-  background: #e6e6e6;
+.nav
+{
+    display: flex;
+    margin-right: 5rem;
+    font-size: 20px;
+    gap: 50px;
 }
 
-    /* Icon styling */
-.icon {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #007bff;
+.nav a
+{
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Enhanced step section */
-.steps .step {
-  text-align: center;
-  flex: 1 1 180px;
-}
-.steps .step i {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #007bff;
+.nav a:hover
+{
+    transform: scale(1.1);
+    text-shadow: 1px 1px 10px whitesmoke;
 }
 
-/* Testimonials - spacing for multiple */
-.testimonials .testimonial {
-  margin-bottom: 2rem;
+.nav a.active
+{
+    border-bottom: 3px solid cyan;
+    text-shadow: 1px 1px 10px whitesmoke;
+}
+.about-section
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    padding: 100px 50px;
+    text-align: center;
 }
 
-/* Contact links in footer */
-.footer-cta p {
-  font-size: 1.1rem;
-}
-.footer-cta a {
-  color: white;
-  text-decoration: underline;
+.about-section h2
+{
+    font-size: 3rem;
+    color: #36393f;
+    margin-bottom: 30px;
 }
 
-  </style>
+.about-section p
+{
+    font-size: 1.5rem;
+    color: #36393f;
+    max-width: 900px;
+    margin: 40px auto 40px;
+}
+
+.about-values {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.value-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    padding: 30px;
+    width: 280px;
+    transition: transform 0.3s ease-in;
+}
+
+.value-card:hover
+{
+    cursor: pointer;
+    transform: scale(1.06);
+    box-shadow: 1px 1px 10px grey;
+}
+
+.value-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+footer
+{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Design That Delivers</h1>
-    <p>We build stunning websites that convert visitors into customers.</p>
-    <a href="#contact" class="btn">Get a Free Quote</a>
-  </section>
+    <div class="header">
+        <div class="name">
 
-  <!-- Services Grid -->
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <i class="fas fa-laptop-code icon"></i>
-        <h3>Web Design</h3>
-        <p>Custom layouts, responsive frameworks, and clean interfaces built to reflect your brand identity.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-user-circle icon"></i>
-        <h3>UI/UX Design</h3>
-        <p>Data-driven design decisions focused on user behavior, clarity, and satisfaction across all devices.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-code icon"></i>
-        <h3>Web Development</h3>
-        <p>Scalable and maintainable code, optimized for speed, SEO, and cross-browser compatibility.</p>
-      </div>
+            <a href="index.html"><img src="./images/logo.png" alt=""></a>
+            <a href="index.html">
+            <h1>QuantumCube</h1>
+            <p>Your web designing partner!</p>
+            </a>
+
+        </div>
+
+        <div class="nav">
+            
+            <a href="about.html" class="active">About Us</a>
+            <a href="ourteam.html">Our Team</a>
+            <a href="services.html">Services</a>
+            <a href="career.html">Careers</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
     </div>
-  </section>
 
-  <!-- Process Section -->
-  <section class="process">
-    <h2>Our Process</h2>
-    <div class="steps">
-      <div class="step">
-        <i class="fas fa-search"></i>
-        <h4>Discovery</h4>
-        <p>Understanding your goals, audience, and competition to lay the foundation.</p>
-      </div>
-      <div class="step">
-        <i class="fas fa-pencil-ruler"></i>
-        <h4>Wireframing</h4>
-        <p>Sketching layouts to plan the structure, flow, and content placement.</p>
-      </div>
-      <div class="step">
-        <i class="fas fa-palette"></i>
-        <h4>Design</h4>
-        <p>Creating visual mockups with brand colors, typography, and imagery.</p>
-      </div>
-      <div class="step">
-        <i class="fas fa-terminal"></i>
-        <h4>Development</h4>
-        <p>Bringing designs to life with clean, optimized code.</p>
-      </div>
-      <div class="step">
-        <i class="fas fa-rocket"></i>
-        <h4>Launch</h4>
-        <p>Testing and deployment with ongoing performance monitoring.</p>
-      </div>
+    <div class="about-section">
+
+        <h2>About Us</h2>
+        <p>
+            At <b>QuantumCube</b>, we blend creativity with cutting-edge technology to build stunning, responssive websites for businesses of all size. Fonded with a vision to empower digital presence, we are passionate about creating solutions that not only look great but also performs exceptionally.
+        </p>
+
+        <p>
+            Our team consists of expert designers, developers, and strategists who work collaboratively to transform your ideas into a powerful online presence. 
+            Whether you're launching a brand new site or revamping an existing one, we’ve got your back!
+        </p>
+
+        <div class="about-values">
+            <div class="value-card">
+                <h3>Creativity</h3>
+                <p>We design with originalityand imagination to make your brand stand out online.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Performance</h3>
+                <p>Optimized for speed, seo, and usability. Our websites are built to perform.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Support</h3>
+                <p>We provide continuous support and updates, to keep your website fresh and secure.</p>
+            </div>
+        </div>
+
     </div>
-  </section>
 
-  <!-- Why Choose Us -->
-  <section class="why-us">
-    <h2>Why Choose Us</h2>
-    <div class="features-grid">
-      <div class="feature"><i class="fas fa-bolt"></i> Fast Delivery</div>
-      <div class="feature"><i class="fas fa-paint-brush"></i> Custom Design</div>
-      <div class="feature"><i class="fas fa-search-plus"></i> SEO-Optimized</div>
-      <div class="feature"><i class="fas fa-life-ring"></i> Ongoing Support</div>
+    <div class="footer">
+
+        <footer>
+
+            <p>&copy; 2025 QuantumCube.  All Rights reserved.</p>
+            <p>Designed by : Jaival R Shah</p>
+
+        </footer>
+
     </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial">
-      <p>“Web Design Co. exceeded our expectations. Our traffic increased by 40% in the first month!”</p>
-      <h4>— Jane Doe, CEO of StartupX</h4>
-    </div>
-    <div class="testimonial">
-      <p>"The UX was spot on. Users find our platform easier to navigate, and conversions have improved."</p>
-      <h4>— Mark L., Product Manager at FinTechify</h4>
-    </div>
-  </section>
-
-  <!-- Footer CTA -->
-  <footer id="contact" class="footer-cta">
-    <h2>Let's Build Something Great Together</h2>
-    <p>Email us at <a href="mailto:hello@webdesignco.com">hello@webdesignco.com</a> or call <a href="tel:+1234567890">(123) 456-7890</a></p>
-    <a href="mailto:hello@webdesignco.com" class="btn">Start Your Project</a>
-  </footer>
-
+    
 </body>
 </html>
