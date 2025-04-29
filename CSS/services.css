@@ -228,3 +228,87 @@ body
 {
     color: white;
 }
+
+@media only screen and (max-width: 768px) {
+    .headerbox
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav
+    {
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .main .container
+    {
+        grid-template-columns: 1fr 1fr; /* Two columns on tablets */
+    }
+
+    .main .container .card
+    {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .main .heading h1
+    {
+        font-size: 30px;
+    }
+
+    .main .heading p
+    {
+        font-size: 18px;
+    }
+}
+
+/* For mobile phones */
+@media only screen and (max-width: 480px) {
+    .headerbox
+    {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .headerbox .name a h1
+    {
+        font-size: 2rem;
+    }
+
+    .nav
+    {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .main .container
+    {
+        grid-template-columns: 1fr; /* One column on mobile */
+    }
+
+    .main .container .card
+    {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .main .heading h1
+    {
+        font-size: 24px;
+    }
+
+    .main .heading p
+    {
+        font-size: 16px;
+    }
+
+    .footer
+    {
+        font-size: 16px;
+    }
+}
