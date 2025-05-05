@@ -1,11 +1,9 @@
-/* Global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
@@ -13,7 +11,6 @@ body {
     background: linear-gradient(#cccccc, #333333);
 }
 
-/* Header styles */
 .headerbox {
     display: flex;
     justify-content: space-between;
@@ -69,16 +66,36 @@ body {
     text-shadow: 1px 1px 10px whitesmoke;
 }
 
-.nav a.active {
-    border-bottom: 3px solid cyan;
-    text-shadow: 1px 1px 10px whitesmoke;
+.nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.7s ease, left 0.3s ease, right 0.3s ease;
 }
 
-/* Main Content */
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    right: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.7s ease, left 0.3s ease, right 0.3s ease;
+}
+
+.nav a:hover::before,
+.nav a:hover::after {
+    width: 100%;
+}
+
 .main {
     width: 100%;
     height: auto;
-    padding-bottom: 50px; /* Add bottom padding to footer */
+    padding-bottom: 50px;
 }
 
 .main a {
@@ -142,7 +159,6 @@ body {
     color: #222;
 }
 
-/* Footer */
 .footer {
     background-color: #333;
     color: white;
@@ -152,12 +168,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ------------ Responsive Media Queries ------------ */
-
-/* For mobile devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
 
-    /* Header - Adjust logo and navigation */
     .headerbox .name img {
         height: 60px;
         width: 60px;
@@ -168,7 +180,7 @@ body {
     }
 
     .nav {
-        display: none; /* Hide navigation bar on mobile */
+        display: none;
         flex-direction: column;
         gap: 20px;
         font-size: 18px;
@@ -176,7 +188,6 @@ body {
         text-align: center;
     }
 
-    /* Main Section */
     .main .heading h1 {
         font-size: 2rem;
         margin-top: 30px;
@@ -188,7 +199,7 @@ body {
     }
 
     .main .container {
-        grid-template-columns: 1fr; /* Stack cards vertically */
+        grid-template-columns: 1fr;
         gap: 20px;
         padding: 20px;
     }
@@ -204,10 +215,8 @@ body {
     }
 }
 
-/* For tablet devices (between 768px and 1024px) */
 @media screen and (max-width: 1024px) {
 
-    /* Header - Adjust logo and navigation */
     .headerbox .name img {
         height: 80px;
         width: 80px;
@@ -221,7 +230,6 @@ body {
         gap: 30px;
     }
 
-    /* Main Section */
     .main .heading h1 {
         font-size: 2.5rem;
         margin-top: 50px;
@@ -232,7 +240,7 @@ body {
     }
 
     .main .container {
-        grid-template-columns: repeat(2, 1fr); /* Two cards per row on tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .main .container .card {
@@ -244,12 +252,10 @@ body {
     }
 }
 
-/* For larger screens (desktops) */
 @media screen and (min-width: 1025px) {
 
-    /* Main Section */
     .main .container {
-        grid-template-columns: repeat(3, 1fr); /* Three cards per row on desktop */
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .footer {

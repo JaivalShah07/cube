@@ -1,17 +1,14 @@
-/* Global styles reset */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* Body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     height: 100%;
 }
 
-/* Header box styles */
 .headerbox {
     display: flex;
     justify-content: space-between;
@@ -22,7 +19,6 @@ body {
     width: 100%;
 }
 
-/* Header - Name styles */
 .headerbox .name {
     display: flex;
     gap: 10px;
@@ -36,7 +32,6 @@ body {
     width: 100px;
 }
 
-/* Header - Title */
 .headerbox .name a h1 {
     font-size: 2.5rem;
 }
@@ -47,14 +42,12 @@ body {
     font-size: 15px;
 }
 
-/* Link styles in header */
 .headerbox a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Navigation styles */
 .nav {
     display: flex;
     margin-right: 5rem;
@@ -71,12 +64,32 @@ body {
     text-shadow: 1px 1px 10px whitesmoke;
 }
 
-.nav a.active {
-    border-bottom: 3px solid cyan;
-    text-shadow: 1px 1px 10px whitesmoke;
+.nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.7s ease, left 0.3s ease, right 0.3s ease;
 }
 
-/* Main section styles */
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    right: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.7s ease, left 0.3s ease, right 0.3s ease;
+}
+
+.nav a:hover::before,
+.nav a:hover::after {
+    width: 100%;
+}
+
 .main {
     background: linear-gradient(to right, #cccccc, #333333);
     padding: 80px 0;
@@ -111,7 +124,6 @@ body {
     background-color: #222;
 }
 
-/* Job section styles */
 .job {
     margin-top: 60px;
 }
@@ -157,7 +169,6 @@ body {
     background-color: #222;
 }
 
-/* Footer styles */
 .footer {
     background-color: #333;
     color: white;
@@ -168,12 +179,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ------------ Responsive Media Queries ------------ */
-
-/* For mobile devices */
 @media screen and (max-width: 768px) {
-
-    /* Header - Adjust logo size and navigation */
     .headerbox .name img {
         height: 60px;
         width: 60px;
@@ -184,14 +190,13 @@ body {
     }
 
     .nav {
-        display: none; /* Hide navigation bar on mobile */
+        display: none;
         flex-direction: column;
         gap: 20px;
         font-size: 18px;
         margin-right: 0;
     }
 
-    /* Main content adjustments */
     .main .main-container h2 {
         font-size: 35px;
         margin-bottom: 20px;
@@ -207,7 +212,6 @@ body {
         padding: 8px 20px;
     }
 
-    /* Job listing adjustments */
     .job .job-container .job-listing {
         margin-left: 20px;
         margin-right: 20px;
@@ -226,10 +230,7 @@ body {
     }
 }
 
-/* For tablet devices (between 768px and 1024px) */
 @media screen and (max-width: 1024px) {
-
-    /* Header - Adjust logo size */
     .headerbox .name img {
         height: 80px;
         width: 80px;
@@ -243,7 +244,6 @@ body {
         gap: 30px;
     }
 
-    /* Main content adjustments */
     .main .main-container h2 {
         font-size: 45px;
     }
@@ -267,7 +267,6 @@ body {
     }
 }
 
-/* For larger screens (desktops) */
 @media screen and (min-width: 1025px) {
     .job .job-container .job-listing {
         margin-left: 200px;

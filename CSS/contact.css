@@ -1,11 +1,9 @@
-/* Global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     width: 100%;
     height: auto;
@@ -13,7 +11,6 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Header styles */
 .headerbox {
     display: flex;
     justify-content: space-between;
@@ -69,12 +66,32 @@ body {
     text-shadow: 1px 1px 10px whitesmoke;
 }
 
-.nav a.active {
-    border-bottom: 3px solid cyan;
-    text-shadow: 1px 1px 10px whitesmoke;
+.nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.7s ease, left 0.3s ease, right 0.3s ease;
 }
 
-/* Contact Section */
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    right: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.7s ease, left 0.3s ease, right 0.3s ease;
+}
+
+.nav a:hover::before,
+.nav a:hover::after {
+    width: 100%;
+}
+
 .contact-section {
     background: #fff;
     padding: 3rem 0;
@@ -135,7 +152,6 @@ body {
     cursor: pointer;
 }
 
-/* Footer */
 .footer {
     background-color: #333;
     color: white;
@@ -146,12 +162,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ------------ Responsive Media Queries ------------ */
-
-/* For mobile devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
 
-    /* Header - Adjust logo and navigation */
     .headerbox .name img {
         height: 60px;
         width: 60px;
@@ -162,7 +174,7 @@ body {
     }
 
     .nav {
-        display: none; /* Hide navigation bar on mobile */
+        display: none;
         flex-direction: column;
         gap: 20px;
         font-size: 18px;
@@ -170,7 +182,6 @@ body {
         text-align: center;
     }
 
-    /* Contact section adjustments */
     .contact-section {
         margin-left: 20px;
         margin-right: 20px;
@@ -206,10 +217,8 @@ body {
     }
 }
 
-/* For tablet devices (between 768px and 1024px) */
 @media screen and (max-width: 1024px) {
 
-    /* Header - Adjust logo and navigation */
     .headerbox .name img {
         height: 80px;
         width: 80px;
@@ -223,7 +232,6 @@ body {
         gap: 30px;
     }
 
-    /* Contact section adjustments */
     .contact-section {
         margin-left: 40px;
         margin-right: 40px;
@@ -250,7 +258,6 @@ body {
     }
 }
 
-/* For larger screens (desktops) */
 @media screen and (min-width: 1025px) {
     .contact-section {
         margin-left: 180px;
